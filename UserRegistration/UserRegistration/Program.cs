@@ -10,7 +10,7 @@ namespace UserRegistration
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter your Choice Number to Validate Program\n 1.First Name\n 2.Last Name\n 3.Email\n 4.Exit\n");
+                Console.WriteLine("Enter your Choice Number to Validate Program\n 1.First Name\n 2.Last Name\n 3.Email\n 4.Mobile Number\n 5.Exit\n");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -33,6 +33,12 @@ namespace UserRegistration
                         mail.ValidateEmail(Email);
                         break;
                     case 4:
+                        Validation num = new Validation();
+                        Console.WriteLine("Enter the Mobile Number for Validation:");
+                        string number = Console.ReadLine();
+                        num.ValidateMobile(number);
+                        break;
+                    case 5:
                         flag = false;
                         break;
                 }
