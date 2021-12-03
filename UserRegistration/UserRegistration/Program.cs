@@ -10,7 +10,7 @@ namespace UserRegistration
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter your Choice Number to Validate Program\n 1.First Name\n 2.Last Name\n 3.Email\n 4.Mobile Number\n 5.Password\n 6.PasswordRule2\n 7.Exit\n");
+                Console.WriteLine("Enter your Choice Number to Validate Program\n 1.First Name\n 2.Last Name\n 3.Email\n 4.Mobile Number\n 5.Password\n 6.PasswordRule2\n 7.PasswordRule3\n 8.Exit\n");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -51,6 +51,12 @@ namespace UserRegistration
                         ruletwo.ValidateRuleTwo(passwordtwo);
                         break;
                     case 7:
+                        Validation rulethree = new Validation();
+                        Console.WriteLine("Enter the Password for Validation:");
+                        string passwordthree = Console.ReadLine();
+                        rulethree.ValidateRuleThree(passwordthree);
+                        break;
+                    case 8:
                         flag = false;
                         break;
                 }
